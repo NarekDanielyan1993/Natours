@@ -1,0 +1,13 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin flexGrid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

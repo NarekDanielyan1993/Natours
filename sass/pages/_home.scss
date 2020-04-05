@@ -1,0 +1,117 @@
+.section-about {
+    padding: 15rem 0;
+    margin-top: -25vh;
+    @media (min-width: 64rem) {
+        margin-bottom: -5.3rem;
+    }
+    background-color: $color-grey-lighten-1;
+
+    &__description {
+        flex-basis: 50rem;
+        padding: 0 1rem;
+        margin-bottom: 3rem;
+        @media (max-width: 64rem) {
+            text-align: center;
+        }
+    }
+
+    &__comp-pictures {
+        width: 40rem;
+        min-height: 10rem;
+    }
+}
+
+.features-section {
+    padding: 15rem 0;
+    background-image: linear-gradient(
+            to right,
+            rgba($color-primary-light, 0.6),
+            rgba($color-primary-dark, 0.8)
+        ),
+        url('../../img/hero.jpg');
+    background-size: cover;
+
+    @media (min-width: 64rem) {
+        transform: skewY(-5deg);
+    }
+
+    @media (min-width: 64rem) {
+        & > * {
+            transform: skewY(5deg);
+        }
+    }
+}
+
+.tours-section {
+    margin-top: -5.5rem;
+    padding: 14rem 0;
+    background-color: $color-grey-lighten-1;
+
+    &__card-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        & > .card {
+            margin: 2rem;
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+    }
+}
+
+.section-stories {
+    position: relative;
+    padding: 12rem 0;
+}
+
+.section-booking {
+    padding: 10rem 0;
+    background-image: linear-gradient(
+        to right bottom,
+        $color-primary-light,
+        $color-primary-dark
+    );
+}
+
+.booking {
+    padding: 5rem 0;
+    background-image: url('../../img/nat-10.jpg');
+    background-size: cover;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.6rem 2rem rgba($color-black, 0.8);
+    @media (min-width: 65rem) {
+        background-image: linear-gradient(
+                100deg,
+                rgba($color-white, 0.8) 0%,
+                rgba($color-white, 0.8) 50%,
+                transparent 50%
+            ),
+            url('../../img/nat-10.jpg');
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        padding: 2rem 0;
+        background-image: linear-gradient(
+            to right,
+            rgba($color-white, 0.8),
+            rgba($color-white, 0.8)
+        );
+    }
+    @media (min-width: 45rem) {
+        &__form {
+            width: 70%;
+        }
+    }
+    @media (min-width: 65rem) {
+        &__form {
+            width: 50%;
+            margin: 0;
+            background-image: none;
+        }
+    }
+}

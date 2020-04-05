@@ -1,0 +1,25 @@
+//abstracts folder
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'layout/header';
+@import 'layout/grid';
+@import 'layout/footer';
+
+//base folder
+@import 'base/animatios';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'components/button';
+@import 'components/form';
+@import 'components/bg-video';
+@import 'components/composition';
+@import 'components/feature-box';
+@import 'components/card';
+@import 'components/story';
+
+//pages folder
+@import 'pages/home';
