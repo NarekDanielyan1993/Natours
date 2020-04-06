@@ -1,0 +1,118 @@
+.navigation {
+    &__toggle {
+        display: none;
+    }
+
+    &__button {
+        position: fixed;
+        right: 5rem;
+        top: 5rem;
+        cursor: pointer;
+        z-index: 2000;
+    }
+
+    &__burger-icons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background-color: $color-white;
+    }
+
+    &__burger-icon {
+        display: block;
+        height: 2px;
+        width: 50%;
+        margin: 0.3rem;
+        background-color: black;
+        transition: all 0.8s ease;
+    }
+
+    &__background {
+        transform: scale(0);
+        position: fixed;
+        top: 5rem;
+        right: 5rem;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        z-index: 1000;
+        background-image: radial-gradient(
+            $color-primary-light,
+            $color-primary-dark
+        );
+        transition: all 0.8s ease;
+    }
+
+    &__nav {
+        position: fixed;
+        top: 50%;
+        right: -30%;
+        transform: translate(50%, -50%);
+        z-index: 1500;
+        transition: all 0.8s ease;
+    }
+
+    &__nav-items {
+        text-align: center;
+    }
+
+    &__nav-item {
+        margin-bottom: 1rem;
+    }
+
+    &__nav-link {
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-weight: 500;
+            font-size: 2rem;
+            padding: 1.2rem;
+            text-transform: uppercase;
+            color: $color-white;
+            background-image: linear-gradient(
+                120deg,
+                transparent 0%,
+                transparent 50%,
+                white 50%
+            );
+            background-size: 225%;
+            z-index: 1;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-position: 100%;
+                transform: translateX(0.2rem);
+                color: $color-primary-light;
+            }
+        }
+    }
+
+    &__toggle:checked ~ &__background {
+        transform: scale(70);
+    }
+    &__toggle:checked ~ &__nav {
+        right: 50%;
+    }
+
+    &__toggle:checked
+        ~ &__button
+        > &__burger-icons
+        > &__burger-icon:nth-child(2) {
+        opacity: 0;
+    }
+
+    &__toggle:checked ~ &__button > &__burger-icons &__burger-icon:last-child {
+        transform: rotate(-45deg) translate(0.5rem, -0.5rem);
+    }
+
+    &__toggle:checked
+        ~ &__button
+        > &__burger-icons
+        > &__burger-icon:first-child {
+        transform: rotate(45deg) translate(0.6rem, 0.6rem);
+    }
+}
