@@ -1,12 +1,23 @@
+/*
+
+phone           600px
+tab-port        900px
+tab-landscape   1200px
+big-desktop     1200+
+*/
 .header {
   height: 95vh;
   position: relative;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
   background-size: cover;
-  background-position: top; }
-  @media (min-width: 64rem) {
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  @media (max-width: 37.5em) {
     .header {
-      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); } }
+      clip-path: none; } }
+  @media (max-width: 56.25em) {
+    .header {
+      clip-path: none; } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -167,17 +178,38 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 75%; } }
+  @media (max-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
 
 body {
-  padding: 0;
+  padding: 3rem;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #777;
   box-sizing: border-box; }
-  @media (min-width: 650px) {
+  @media (max-width: 37.5em) {
     body {
-      padding: 3rem; } }
+      padding: 0; } }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 ul {
   list-style: none; }
@@ -193,45 +225,50 @@ a {
   display: block;
   padding-bottom: 2.3rem;
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 5rem;
   letter-spacing: 2rem;
   text-transform: uppercase;
   animation-name: moveInLeft;
   animation-duration: 3s; }
-  @media (min-width: 42rem) {
+  @media (max-width: 37.5em) {
     .heading-primary--main {
-      letter-spacing: 4rem;
-      font-size: 4rem; } }
+      font-size: 4rem;
+      letter-spacing: 1rem; } }
 
 .heading-primary--sub {
   display: block;
   margin-bottom: 1rem;
-  font-size: 1.7rem;
-  color: #fff;
-  letter-spacing: 1.6rem;
   font-weight: 700;
+  font-size: 1.7rem;
+  letter-spacing: 2rem;
+  color: #fff;
   text-transform: uppercase;
   animation-name: moveInRight;
   animation-duration: 3s; }
+  @media (max-width: 37.5em) {
+    .heading-primary--sub {
+      font-size: 1.4rem;
+      letter-spacing: 0.6rem; } }
 
 .heading-secondary {
   display: inline-block;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 1.5rem;
-  letter-spacing: 0.5rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.6rem;
   background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
   -webkit-background-clip: text;
   color: transparent;
-  transition: all 0.2s ease-out;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -ms-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out; }
-  @media (min-width: 28rem) {
+  transition: all 0.2s ease-out; }
+  @media (max-width: 37.5em) {
     .heading-secondary {
-      font-size: 2.5rem;
-      letter-spacing: 0.6rem; } }
+      font-size: 2rem; } }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 2rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 1.4rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg);
     -webkit-transform: skewY(2deg) skewX(15deg);
@@ -396,7 +433,6 @@ a {
     opacity: 0;
 } */
 .form-booking {
-  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -444,9 +480,6 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; }
-    @media (min-width: 120rem) {
-      .form-booking__radio {
-        align-self: flex-start; } }
   .form-booking__radio-group {
     margin-left: 4rem;
     position: relative;
@@ -526,9 +559,8 @@ a {
       z-index: 2; }
 
 .feature-box {
-  width: 23rem;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
+  flex-basis: 22rem;
+  margin: 0.6rem;
   min-height: 30rem;
   padding: 2rem;
   font-size: 1.5rem;
@@ -545,6 +577,10 @@ a {
   -moz-transition: transform 0.3s ease-out;
   -ms-transition: transform 0.3s ease-out;
   -o-transition: transform 0.3s ease-out; }
+  @media (max-width: 37.5em) {
+    .feature-box {
+      flex-basis: 100%;
+      margin: 0 0 1rem 0; } }
   .feature-box__icon {
     display: inline-block;
     font-size: 4rem;
@@ -563,7 +599,7 @@ a {
   position: relative;
   perspective: 180rem;
   line-height: 3.5rem;
-  width: 27rem;
+  flex-basis: 27rem;
   height: 38rem; }
   .card__side {
     position: absolute;
@@ -572,7 +608,7 @@ a {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     font-size: 1.3rem;
     transition: all 1s ease-out;
     backface-visibility: hidden;
@@ -661,19 +697,29 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 68%;
+  width: 75%;
   margin: 0 auto;
   padding: 2rem;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.3);
-  backface-visibility: hidden; }
-  @media (min-width: 64rem) {
+  backface-visibility: hidden;
+  transform: skew(-12deg); }
+  @media (max-width: 37.5em) {
     .story {
-      transform: skew(-12deg); } }
-  @media (min-width: 64rem) {
-    .story > * {
-      transform: skew(12deg); } }
+      width: 100%; } }
+  .story > * {
+    transform: skew(12deg); }
+  @media (max-width: 37.5em) {
+    .story {
+      transform: skew(0); }
+      .story > * {
+        transform: skew(0); } }
+  @media (max-width: 56.25em) {
+    .story {
+      transform: skew(0); }
+      .story > * {
+        transform: skew(0); } }
   .story__shape {
     position: relative;
     margin-right: 2rem;
@@ -717,6 +763,22 @@ a {
   top: 5rem;
   cursor: pointer;
   z-index: 2000; }
+  @media (max-width: 37.5em) {
+    .navigation__button {
+      top: 4rem;
+      right: 4rem; } }
+  @media (max-width: 56.25em) {
+    .navigation__button {
+      top: 4rem;
+      right: 4rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__button {
+      top: 3.5rem;
+      right: 3.5rem; } }
+  @media (max-width: 56.25em) {
+    .navigation__button {
+      top: 3.5rem;
+      right: 3.5rem; } }
 
 .navigation__burger-icons {
   display: flex;
@@ -765,7 +827,7 @@ a {
 .navigation__nav-link:link, .navigation__nav-link:visited {
   display: inline-block;
   font-weight: 500;
-  font-size: 1.6rem;
+  font-size: 2rem;
   padding: 1.2rem;
   text-transform: uppercase;
   color: #fff;
@@ -773,9 +835,6 @@ a {
   background-size: 225%;
   z-index: 1;
   transition: all 0.3s ease; }
-  @media (min-width: 25rem) {
-    .navigation__nav-link:link, .navigation__nav-link:visited {
-      font-size: 2rem; } }
   .navigation__nav-link:link:hover, .navigation__nav-link:visited:hover {
     background-position: 100%;
     transform: translateX(0.2rem);
@@ -797,17 +856,17 @@ a {
   transform: rotate(45deg) translate(0.6rem, 0.6rem); }
 
 .section-about {
-  padding: 15rem 0;
+  padding: 15rem 0 20rem 0;
   margin-top: -25vh;
   background-color: #f1f1f1; }
-  @media (min-width: 64rem) {
-    .section-about {
-      margin-bottom: -5.3rem; } }
   .section-about__description {
     flex-basis: 50rem;
     padding: 0 1rem;
     margin-bottom: 3rem; }
-    @media (max-width: 64rem) {
+    @media (max-width: 37.5em) {
+      .section-about__description {
+        text-align: center; } }
+    @media (max-width: 75em) {
       .section-about__description {
         text-align: center; } }
   .section-about__comp-pictures {
@@ -816,14 +875,24 @@ a {
 
 .features-section {
   padding: 15rem 0;
+  margin-top: -4%;
   background-image: linear-gradient(to right, rgba(126, 213, 111, 0.6), rgba(40, 180, 133, 0.8)), url("../../img/hero.jpg");
-  background-size: cover; }
-  @media (min-width: 64rem) {
+  background-size: cover;
+  transform: skewY(-5deg); }
+  .features-section > * {
+    transform: skewY(5deg); }
+  @media (max-width: 37.5em) {
     .features-section {
-      transform: skewY(-5deg); } }
-  @media (min-width: 64rem) {
-    .features-section > * {
-      transform: skewY(5deg); } }
+      margin-top: 0;
+      transform: skewY(0); }
+      .features-section > * {
+        transform: skewY(0); } }
+  @media (max-width: 56.25em) {
+    .features-section {
+      margin-top: 0;
+      transform: skewY(0); }
+      .features-section > * {
+        transform: skewY(0); } }
 
 .tours-section {
   margin-top: -5.5rem;
@@ -835,8 +904,9 @@ a {
     flex-wrap: wrap; }
     .tours-section__card-container > .card {
       margin: 2rem; }
-      .tours-section__card-container > .card:not(:last-child) {
-        margin-right: 2rem; }
+      @media (max-width: 37.5em) {
+        .tours-section__card-container > .card {
+          margin: 0 0 1rem 0; } }
 
 .section-stories {
   position: relative;
@@ -851,22 +921,41 @@ a {
   background-image: url("../../img/nat-10.jpg");
   background-size: cover;
   border-radius: 0.3rem;
-  box-shadow: 0 0.6rem 2rem rgba(0, 0, 0, 0.8); }
-  @media (min-width: 65rem) {
+  box-shadow: 0 0.6rem 2rem rgba(0, 0, 0, 0.8);
+  background-image: linear-gradient(100deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url("../../img/nat-10.jpg"); }
+  @media (max-width: 37.5em) {
     .booking {
-      background-image: linear-gradient(100deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url("../../img/nat-10.jpg"); } }
+      padding: 0; } }
+  @media (max-width: 37.5em) {
+    .booking {
+      background-image: url("../../img/nat-10.jpg"); } }
+  @media (max-width: 56.25em) {
+    .booking {
+      background-image: url("../../img/nat-10.jpg"); } }
   .booking__form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    padding: 2rem 0;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)); }
-  @media (min-width: 45rem) {
-    .booking__form {
-      width: 70%; } }
-  @media (min-width: 65rem) {
+    margin: 0;
+    width: 50%;
+    padding: 2rem; }
+  @media (max-width: 37.5em) {
     .booking__form {
       width: 50%;
-      margin: 0;
       background-image: none; } }
+  @media (max-width: 75em) {
+    .booking__form {
+      width: 50%;
+      background-image: none; } }
+  @media (max-width: 37.5em) {
+    .booking__form {
+      width: 80%;
+      margin: 0 auto;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)); } }
+  @media (max-width: 56.25em) {
+    .booking__form {
+      width: 80%;
+      margin: 0 auto;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)); } }
+  @media (max-width: 37.5em) {
+    .booking__form {
+      width: 100%; } }
