@@ -69,7 +69,10 @@
         &:visited {
             display: inline-block;
             font-weight: 500;
-            font-size: 2rem;
+            font-size: 1.6rem;
+            @media (min-width: 25rem) {
+                font-size: 2rem;
+            }
             padding: 1.2rem;
             text-transform: uppercase;
             color: $color-white;

@@ -268,6 +268,9 @@ a {
 .u-margin-top-bottom-small {
   margin: 1rem 0; }
 
+.u-margin-top-bottom-medium {
+  margin: 6rem 0; }
+
 .u-display-block {
   display: block; }
 
@@ -762,7 +765,7 @@ a {
 .navigation__nav-link:link, .navigation__nav-link:visited {
   display: inline-block;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 1.2rem;
   text-transform: uppercase;
   color: #fff;
@@ -770,6 +773,9 @@ a {
   background-size: 225%;
   z-index: 1;
   transition: all 0.3s ease; }
+  @media (min-width: 25rem) {
+    .navigation__nav-link:link, .navigation__nav-link:visited {
+      font-size: 2rem; } }
   .navigation__nav-link:link:hover, .navigation__nav-link:visited:hover {
     background-position: 100%;
     transform: translateX(0.2rem);
