@@ -45,3 +45,18 @@ p {
 a {
     text-decoration: none;
 }
+
+*:focus,
+*:active,
+a:active,
+a:focus,
+input:focus,
+input:active {
+    -moz-outline-style: none;
+    outline: none;
+    outline: 0;
+}
+
+button {
+    border: none;
+}

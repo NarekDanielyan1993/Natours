@@ -1,9 +1,6 @@
 .grid {
-    @media (min-width: 55rem) {
-        max-width: $grid-width;
-        margin: 0 auto;
-        padding: 0 2rem;
-    }
+    max-width: $grid-width;
+    margin: 0 auto;
 }
 
 .row {
