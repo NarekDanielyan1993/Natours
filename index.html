@@ -492,9 +492,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <div
-                                class="text-center u-margin-top-small"
-                            >
+                            <div class="text-center u-margin-top-small">
                                 <button
                                     class="booking__form__button btn btn--green"
                                 >
@@ -508,11 +506,22 @@
         </main>
         <footer class="footer">
             <div class="footer__logo-and-name u-margin-bottom-medium">
-                <img
-                    src="./img/logo-green-2x.png"
-                    alt="logo"
-                    class="footer__logo"
-                />
+                <picture class="footer__logo">
+                    <source
+                        srcset="
+                            img/logo-green-small-1x.png 1x,
+                            img/logo-green-small-2x.png 2x
+                        "
+                        media="(max-width: 37.5em)"
+                    />
+                    <img
+                        srcset="
+                            img/logo-green-1x.png 1x,
+                            img/logo-green-2x.png 2x
+                        "
+                        alt="logo"
+                    />
+                </picture>
             </div>
             <div class="grid">
                 <div class="footer__row">

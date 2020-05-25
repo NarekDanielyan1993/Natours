@@ -28,11 +28,8 @@
         margin-right: 2rem;
         height: 10rem;
         width: 10rem;
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        backface-visibility: hidden;
+        border-radius: 50%;
+        overflow: hidden;
     }
 
     &__img {
@@ -44,7 +41,7 @@
 
     &__caption {
         position: absolute;
-        top: 50%;
+        top: 53%;
         left: 50%;
         transform: translate(-40%, 100%);
         color: $color-white;

@@ -426,10 +426,10 @@ button {
     font-size: 1.5rem;
     transition: all 0.2s ease; }
   .form-booking__animation {
-    height: 0.2rem;
+    height: 2px;
     width: 0;
     position: absolute;
-    bottom: 35px;
+    bottom: 40%;
     left: 0;
     background-color: red;
     transition: all 0.2s ease; }
@@ -700,11 +700,8 @@ button {
     margin-right: 2rem;
     height: 10rem;
     width: 10rem;
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    backface-visibility: hidden; }
+    border-radius: 50%;
+    overflow: hidden; }
   .story__img {
     height: 100%;
     transform: translateX(-2.2rem) scale(1.5);
@@ -712,7 +709,7 @@ button {
     backface-visibility: hidden; }
   .story__caption {
     position: absolute;
-    top: 50%;
+    top: 53%;
     left: 50%;
     transform: translate(-40%, 100%);
     color: #fff;

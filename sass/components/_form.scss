@@ -52,10 +52,10 @@
     }
 
     &__animation {
-        height: 0.2rem;
+        height: 2px;
         width: 0;
         position: absolute;
-        bottom: 35px;
+        bottom: 40%;
         left: 0;
         background-color: red;
         transition: all 0.2s ease;
